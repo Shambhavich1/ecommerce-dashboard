@@ -11,7 +11,8 @@ st.markdown("Analyze sales performance and customer behavior")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Amazon Sale Report1.csv")
+    url = "https://drive.google.com/uc?id=1U3wVW3AVMVDcdDRteWc9DP79Asuvm0j1"
+    df = pd.read_csv(url)
     df['Date'] = pd.to_datetime(df['Date'])
     return df
 
